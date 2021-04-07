@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="can">
+        <item>can0</item>
+        <item>can1</item>
+    </string-array>
+
+    <string-array name="baudRate">
+        <item>5000</item>
+        <item>10000</item>
+        <item>20000</item>
+        <item>50000</item>
+        <item>100000</item>
+        <item>125000</item>
+        <item>250000</item>
+        <item>500000</item>
+        <item>800000</item>
+        <item>1000000</item>
+    </string-array>
+</resources>

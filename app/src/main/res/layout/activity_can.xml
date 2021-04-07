@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_recv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#DDDDDD"
+        android:scrollbars="vertical"
+        android:singleLine="false"
+        app:layout_constraintBottom_toTopOf="@+id/btn_clear"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_clear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="清空接收"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="发送"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <Button
+        android:id="@+id/btn_open"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="开启"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/btn_send" />
+
+    <TextView
+        android:id="@+id/tv_baudRate"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="波特率:"
+        app:layout_constraintBottom_toTopOf="@+id/btn_open"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <Spinner
+        android:id="@+id/spinner_baudRate"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:entries="@array/baudRate"
+        app:layout_constraintBottom_toTopOf="@+id/btn_open"
+        app:layout_constraintLeft_toRightOf="@+id/tv_baudRate"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_can"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="can设备:"
+        app:layout_constraintBottom_toTopOf="@+id/tv_baudRate"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <Spinner
+        android:id="@+id/spinner_can"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:entries="@array/can"
+        app:layout_constraintBottom_toTopOf="@+id/spinner_baudRate"
+        app:layout_constraintLeft_toRightOf="@+id/tv_can"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <EditText
+        android:id="@+id/edit_send"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#DDDDDD"
+        android:digits="0123456789abcdef"
+        android:gravity="top"
+        android:text="1122334455667788"
+        app:layout_constraintBottom_toTopOf="@+id/tv_can"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_clear" />
+</android.support.constraint.ConstraintLayout>
